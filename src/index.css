@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111827;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  @apply text-gray-100;
+}
+
+/* animations */
+
+.fadeIn {
+  animation: 0.3s fadeIn forwards;
+}
+
+.fadeOut {
+  animation: 0.3s fadeOut forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-20px, 0);
+  }
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --color-bg: #111827;
+    --color-text: #ffffff;
+  }
+}
