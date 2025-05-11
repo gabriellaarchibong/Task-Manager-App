@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('https://github.com/gabriellaarchibong/Task-Manager-App/sw.js', { scope: 'https://github.com/gabriellaarchibong/Task-Manager-App/' })})}
