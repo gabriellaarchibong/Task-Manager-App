@@ -5,10 +5,14 @@ import { VitePWA } from "vite-plugin-pwa"
 
 // https://vite.dev/config/
 export default defineConfig({
-	base: "https://github.com/gabriellaarchibong/Task-Manager-App",
+	base: "/",
   	plugins: [react(),
 		tailwindcss(),
 		VitePWA({
+			workbox: {
+				// cacheId: `tickit-v${pkg.version}`,
+				sourcemap: true,
+			},
 			devOptions: {
 				enabled: true
 			},
@@ -62,3 +66,4 @@ export default defineConfig({
  
 })
 
+// 892690
