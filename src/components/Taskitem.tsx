@@ -4,10 +4,10 @@ import { MdComment } from "react-icons/md";
 import { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 
-function Taskitem({ id, body, priority, isCompleted, onCheck, onDelete }: TaskItemProps) {
+function Taskitem({body, priority, isCompleted, onCheck, onDelete }: TaskItemProps) {
 	const [isTaskCompleted, setIstaskCompleted] = useState(isCompleted)
 	const syncCheck = async (completed: boolean) => {
-		console.log(id);
+		console.log("testing for stuff in the service worker");
 		try {
 		//   await editTask(id, taskCompleted);
 		  onCheck(completed);

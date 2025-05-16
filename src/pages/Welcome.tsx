@@ -15,7 +15,7 @@ function Welcome() {
         <div className="mt-10">
           <p className="text-4xl">
             <span className="text-green-200 mr-2">Better </span>
-            Task Management
+            Task Management v1
           </p>
           <p className="mt-4 text-gray-300 text-opacity-90">
             A simple and efficient task manager app to help you organize, track, and complete your daily tasks with ease.
