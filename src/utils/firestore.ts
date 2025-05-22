@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth"
 
 import { 
-	getFirestore,
+	// getFirestore,
 	initializeFirestore,
 	persistentLocalCache,
 	persistentMultipleTabManager
@@ -19,11 +20,12 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
 // offline support
-initializeFirestore(app, {
+export const db = initializeFirestore(app, {
 	localCache: persistentLocalCache({
 		tabManager: persistentMultipleTabManager()
 	})
 })
-// const analytics = getAnalytics(app);
-export const db = getFirestore(app);
+
+export const auth  = getAuth(app)

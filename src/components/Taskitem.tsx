@@ -7,7 +7,6 @@ import { FaTrash } from "react-icons/fa";
 function Taskitem({body, priority, isCompleted, onCheck, onDelete }: TaskItemProps) {
 	const [isTaskCompleted, setIstaskCompleted] = useState(isCompleted)
 	const syncCheck = async (completed: boolean) => {
-		console.log("testing for stuff in the service worker");
 		try {
 		//   await editTask(id, taskCompleted);
 		  onCheck(completed);
@@ -30,15 +29,13 @@ function Taskitem({body, priority, isCompleted, onCheck, onDelete }: TaskItemPro
 	const handleCheck = async () => {
 		// onCheck(!isCompleted);
 		await syncCheck(!isCompleted)
-		
-		console.log(!isCompleted)
 	};
 	
 	return (
-		<div className="group relative bg-[#1f1f1f] p-5 w-full rounded-xl" tabIndex={0}>
-			<p className="text-gray-400 text-xs">Priority: {priority}</p>
+		<div className="group relative shadow dark:bg-[#1f1f1f] p-5 w-full rounded-xl" tabIndex={0}>
+			<p className="text-gray-900 dark:text-gray-100 text-xs">Priority: {priority}</p>
 			<div className="flex w-full mt-2 justify-between">
-			<p className="flex grow text-gray-200 text-xl">{body}</p>
+			<p className="flex grow text-gray-950 dark:text-gray-100 text-xl">{body}</p>
 			<input
 				onChange={() => handleCheck()}
 				checked={isTaskCompleted}
@@ -56,7 +53,7 @@ function Taskitem({body, priority, isCompleted, onCheck, onDelete }: TaskItemPro
 					role="button"
 					aria-label="Delete Task"
 				/>
-				<div className="text-sm flex">
+				<div className="text-sm flex text-gray-600 dark:text-gray-400">
 					<MdComment className="my-auto mr-2" />
 					<span className="inline-block my-auto">4</span>
 				</div>

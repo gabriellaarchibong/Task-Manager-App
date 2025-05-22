@@ -3,7 +3,7 @@ import { IoArrowBack } from "react-icons/io5";
 
 function Progress() {
   return (
-	<div className="flex flex-col justify-center items-center p-4">
+	<div className="flex flex-col justify-center items-center p-4 text-gray-900 dark:text-gray-100">
 		<h1 className="text-2xl font-bold">This page is still in development</h1><br />
 		<Link to="/tasks">
 		   <div className="flex gap-2 items-center">
